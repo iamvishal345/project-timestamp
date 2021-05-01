@@ -24,11 +24,11 @@ app.get("/api/:date", function (req, res) {
     } else {
       resDate = new Date(date);
     }
-    if (resDate.toString === "Invalid Date") {
-      res.json({ error: "Invalid Date" });
-    } else {
-      res.json({ unix: resDate.getTime(), utc: resDate.toUTCString() });
-    }
+  }
+  if (resDate.toString === "Invalid Date") {
+    res.json({ error: "Invalid Date" });
+  } else {
+    res.json({ unix: resDate.getTime(), utc: resDate.toUTCString() });
   }
 });
 
